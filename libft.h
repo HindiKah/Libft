@@ -112,4 +112,6 @@ char				*ft_strpbrk(const char *str, const char *c);
 double				ft_pow(double n, double p);
 float				ft_powf(float n, float p);
 int					ft_isxdigit(int c);
+size_t				ft_strlen_c(char *str, char c);
+char				*ft_strdup_c(char *str, char c);
 #endif
