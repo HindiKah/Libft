@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                            :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ybenoit <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ybenoit <ybenoit@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 20:37:25 by ybenoit           #+#    #+#             */
-/*   Updated: 2016/11/07 21:42:54 by ybenoit          ###   ########.fr       */
+/*   Created: 2016/12/05 19:15:09 by ybenoit           #+#    #+#             */
+/*   Updated: 2016/12/05 19:15:12 by ybenoit          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char*ft_strndup(const char *str, size_t len)
+char	*ft_strndup(const char *str, size_t n)
 {
-	char *copy;
+	char *ret;
 
-	if (len > ft_strlen(str))
-		len = ft_strlen(str);
-	copy = malloc(len + 1);
-	if (!copy)
+	if (n > ft_strlen(str))
+		n = ft_strlen(str);
+	ret = malloc(n + 1);
+	if (!ret)
 		return (NULL);
-	ft_strncpy(copy, str, len);
-	copy[len] = '\0';
-	return (copy);
+	ft_strncpy(ret, str, n);
+	ret[n] = '\0';
+	return (ret);
 }
